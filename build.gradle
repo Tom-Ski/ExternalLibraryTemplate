@@ -1,0 +1,43 @@
+apply from: "dependencies.gradle"
+
+subprojects {
+
+    ext {
+        publishedGroupId = "com.asidik.template"
+        libraryName = "ExternalLibraryTemplate"
+
+        libraryDescription = "Simple External Libary Template"
+
+        libraryVersion = '0.0.1'
+
+        siteUrl = 'https://asidik.com'
+        gitUrl = 'https://github.com/Tom-Ski/ExternalLibraryTemplate.git'
+
+        developerId = "Tomski"
+        developerName = "Tom Wojciechowski"
+        developerEmail = "tomwojciechowski@asidik.com"
+
+        licenseName = "The Apache Software License, Version 2.0"
+        licenseUrl = "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        allLicenses = ["Apache-2.0"]
+    }
+
+    buildscript {
+        repositories {
+            mavenCentral()
+            jcenter()
+            maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+            google()
+        }
+    }
+
+    repositories {
+        mavenCentral()
+        jcenter()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        maven {
+            url "https://maven.google.com"
+        }
+    }
+}
+

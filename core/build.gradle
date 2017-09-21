@@ -1,0 +1,54 @@
+apply plugin: "maven"
+apply plugin: 'java'
+
+sourceSets.main.java.srcDirs = ["src/"]
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+dependencies {
+    compileOnly libraries.libgdxcore
+}
+
+ext {
+    artifact = "core"
+}
+
+
+install {
+    repositories.mavenInstaller {
+        pom {
+            project {
+                packaging 'jar'
+                groupId publishedGroupId
+                artifactId artifact
+
+                // Add your description here
+                name libraryName
+                description libraryDescription
+                url siteUrl
+
+                // Set your license
+                licenses {
+                    license {
+                        name licenseName
+                        url licenseUrl
+                    }
+                }
+                developers {
+                    developer {
+                        id developerId
+                        name developerName
+                        email developerEmail
+                    }
+                }
+                scm {
+                    connection gitUrl
+                    developerConnection gitUrl
+                    url siteUrl
+
+                }
+            }
+        }
+    }
+}

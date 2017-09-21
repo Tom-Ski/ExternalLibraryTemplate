@@ -1,0 +1,10 @@
+ext {
+    versions = [:]
+    libraries = [:]
+}
+
+versions.libgdx = "1.9.6"
+
+libraries.libgdxcore = [
+        "com.badlogicgames.gdx:gdx:${versions.libgdx}"
+]
