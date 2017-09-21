@@ -24,4 +24,4 @@ Run `gradlew install` from command line, this will install to your local maven r
 
 In any gradle project, make sure you have the **mavenLocal()** repository and add the following line for your project dependencies: 
 
-`compile my.custom.package:myArtifactId:version`
+`compile "my.custom.package:myArtifactId:version"`
