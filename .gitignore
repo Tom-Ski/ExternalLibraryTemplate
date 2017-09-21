@@ -20,6 +20,9 @@
 .idea/**/uiDesigner.xml
 
 # Gradle:
+.gradle
+gradle-app.setting
+build/
 .idea/**/gradle.xml
 .idea/**/libraries
 

@@ -22,6 +22,9 @@ subprojects {
         allLicenses = ["Apache-2.0"]
     }
 
+    group = publishedGroupId
+    version = libraryVersion
+
     buildscript {
         repositories {
             mavenCentral()
